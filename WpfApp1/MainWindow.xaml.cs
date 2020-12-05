@@ -20,9 +20,21 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ViewModel view = new ViewModel();
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = view;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            view.Add_color_to_list();
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            view.RemoveSelectedColor();
         }
     }
 }
