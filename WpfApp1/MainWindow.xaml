@@ -97,7 +97,10 @@
                         <Border Grid.Column="0">
                             <TextBlock Text="{Binding ElementName=fleks, Path=Background, Mode=OneTime}"></TextBlock>
                         </Border>
-                        <Border Grid.Column="1" Width="250" Background="{Binding ElementName=fleks, Path=Background, Mode=OneTime}" >
+                        <Border Grid.Column="1" Width="250" >
+                            <Border.Background>
+                                <SolidColorBrush Color="{Binding}"/>
+                            </Border.Background>
                         </Border>
                     </Grid>
                 </DataTemplate>
